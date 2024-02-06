@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>JavaScript Ex2</title>
+    <link rel="stylesheet" href="./css/stylerule.css">
+
+    <script>
+        function findMaxValue() {
+            var a = Number(document.getElementById("txt-num1").value);
+            var b = Number(document.getElementById("txt-num2").value);
+            var c = Number(document.getElementById("txt-num3").value);
+
+            var max = a;
+        
+            if (a > b && a > c)
+                max = a;
+            else if(b>c)
+                max = b;
+            else
+                max = c;
+        
+            document.getElementById("label-max").innerHTML = max + " is Max value";
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 class="page-header">JavaScript to Check Conditions</h1>
+    <hr class="hr-red">
+
+    <div class="container">
+        <input type="text" placeholder="Num1" id="txt-num1" class="form-input">
+        <input type="text" placeholder="Num2" id="txt-num2" class="form-input">
+        <input type="text" placeholder="Num3" id="txt-num3" class="form-input">
+
+        <input type="button" class="btn btn-w1" value="Find Max" onclick="findMaxValue()">
+
+        <br><br>
+        <label class="answer" id="label-max">null</label>
+    </div>
+
+</body>
+
+</html>

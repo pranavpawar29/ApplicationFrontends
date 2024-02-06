@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>JavaScript Ex2</title>
+    <link rel="stylesheet" href="./css/stylerule.css">
+
+    <script>
+        function clickMe(target)
+        {
+            console.log("Button Clicked " + target.innerHTML);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 class="page-header">JavaScript Multiple Button clicks</h1>
+    <hr class="hr-red">
+
+    <div class="container">
+        <button class="btn btn-w1" onclick="clickMe(this)">Button 1</button>
+        <button class="btn btn-w1" onclick="clickMe(this)">Button 2</button>
+        <button class="btn btn-w1" onclick="clickMe(this)">Button 3</button>
+        <button class="btn btn-w1" onclick="clickMe(this)">Button 4</button>
+        <button class="btn btn-w1" onclick="clickMe(this)">Button 5</button>
+    </div>
+
+</body>
+
+</html>

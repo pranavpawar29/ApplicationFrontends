@@ -1,0 +1,22 @@
+HTML
+--------------
+	-> HTML is Markup Programming Language
+	-> Invented By Tim Berners-Lee 
+	-> Tags : Mandetory Tags <html>, <head>, <title>, <body>
+		  Heading and Paragraph Tags : <h1> ... <h6>, <p>
+		  Font and text Styling Tags : <font>, <b>, <u>, <i>, <em>, <br>, <hr>
+		  List Item Tags : <ul>, <ol>, <li>
+		  Hyperlinks and Images : <a href="#">, <img src="" />
+		  Table Tags : <table> <thead>, <th>, <tbody>, <tr>, <td>
+		  Form Input Element Tags : <input type="">, <select>, <button>, <form>
+		  Container Tags : <div>, <span>
+
+	-> Attributes : 
+
+
+
+How to Run HTML Page?
+----------------------------
+	1. Copy the File Path and Paste it in Browser -> Enter
+	2. Open Workspace, Right Click .html file -> Open With -> select any Browser
+	3. Install Extension in VS-Code -> Live Server -> Right Click anywhere on html code -> Select "Open With Live Server"

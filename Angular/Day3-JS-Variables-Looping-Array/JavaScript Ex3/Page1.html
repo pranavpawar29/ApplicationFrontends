@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JavaScript Ex3</title>
+        <link rel="stylesheet" href="css/stylerule.css">
+
+        <script>
+            function choiceCertificate(target)
+            {
+                document.getElementById("label-ans").innerHTML="You selected <b>"+ target.value +"</b>";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="page-header">JavaScript to handle radio button events</h1>
+        <hr class="hr-red">
+        <div class="container">
+            <input type="radio" name="certification" id="c1" onchange="choiceCertificate">
+            <label for="c1">Google cloud engineer</label>
+
+            <input type="radio" name="certification" id="c2" onchange="choiceCertificate">
+            <label for="c2">AWS engineer</label>
+
+            <input type="radio" name="certification" id="c3" onchange="choiceCertificate">
+            <label for="c3">Azure cloud engineer</label>
+
+            <input type="radio" name="certification" id="c4" onchange="choiceCertificate">
+            <label for="c4">Third Party cloud engineer</label>
+        </div>
+    </body>
+</html>

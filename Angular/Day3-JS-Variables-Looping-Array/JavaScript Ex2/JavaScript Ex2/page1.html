@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>JavaScript Ex2</title>
+        <link rel="stylesheet" href="./css/stylerule.css">
+
+        <script>
+            function addition()
+            {
+                var x = Number(document.getElementById("txt-num1").value);   
+                var y = Number(document.getElementById("txt-num2").value);
+
+                var ans = x + y;
+                document.getElementById("label-ans").innerHTML = "Addition = " + ans;
+            }
+
+            function subtraction()
+            {
+                var x = Number(document.getElementById("txt-num1").value);   
+                var y = Number(document.getElementById("txt-num2").value);
+
+                var ans = x - y;
+                document.getElementById("label-ans").innerHTML = "Subtraction = " + ans;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 class="page-header">JavaScript to perform Calculations</h1>
+        
+        <div class="container">
+            <input type="text" placeholder="Num1" id="txt-num1" class="form-input">
+            <input type="text" placeholder="Num2" id="txt-num2" class="form-input">
+            <br><br>
+            <input type="button" value="+" class="btn btn-w1" onclick="addition()">
+            <input type="button" value="-" class="btn btn-w1" onclick="subtraction()">
+            <input type="button" value="*" class="btn btn-w1">
+            <input type="button" value="/" class="btn btn-w1">
+
+            <br><br>
+
+            <label class="answer" id="label-ans">null</label>
+        </div>
+    </body>
+</html>

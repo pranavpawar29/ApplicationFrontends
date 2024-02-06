@@ -1,0 +1,13 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+</head>
+
+<div class="zippy">
+    <div class="zippy-heading" [ngClass]="{'expanded': isExpanded}" (click)="toggled()">
+        {{ title }}
+        <span class="material-symbols-outlined">{{expand}}</span>
+    </div>
+    <div class="zippy-body" *ngIf="isExpanded">
+        <ng-content></ng-content>
+    </div>
+</div>

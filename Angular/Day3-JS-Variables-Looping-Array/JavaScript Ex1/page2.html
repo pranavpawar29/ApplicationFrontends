@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JavaScript Ex1</title>
+        <link rel="stylesheet" href="./css/stylerule.css">
+
+        <script>
+            function readUsername()
+            {
+                var uname = document.getElementById("txt-username1").value;
+                console.log("variable uname = " + uname);
+
+                var usernames = document.getElementsByClassName("form-input");
+                console.log("total users = " + usernames.length);
+
+                console.log("First User = " + usernames[0].value);
+                console.log("Second User = " + usernames[1].value);
+                console.log("Third User  = " + usernames[2].value);
+            }
+        </script>
+    </head>
+
+    <body>
+        
+        <h1 class="page-header">JavaScript DOM</h1>
+
+
+        <div class="container">
+            <input type="text" class="form-input" placeholder="Username" id="txt-username1">
+            <input type="text" class="form-input" placeholder="Username" id="txt-username2">
+            <input type="text" class="form-input" placeholder="Username" id="txt-username3">
+
+            <input type="button" class="btn" value="Show Username" onclick="readUsername()">
+
+            <hr class="hr-red">
+
+            <ul class="ul-basic">
+                <li class="list-item li-w1">California</li>
+                <li class="list-item li-w1">Hyderabad</li>
+                <li class="list-item li-w1">Dubai</li>
+                <li class="list-item li-w1">Sydney</li>
+            </ul>
+            
+        </div>
+
+        
+    </body>
+</html>

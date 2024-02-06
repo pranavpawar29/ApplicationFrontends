@@ -1,0 +1,115 @@
+https://fonts.google.com/icons?selected=Material+Symbols+Outlined:favorite:FILL@1;wght@400;GRAD@0;opsz@48
+
+https://material.angular.io/components/toolbar/overview
+
+https://angular.io/guide/deprecations#angularhttp
+
+
+constructor(private _likesCount: number, private _isSelected: boolean){
+    }
+
+    onClick(){
+        this._likesCount += (this._isSelected)? -1 : 1;
+        this._isSelected = !this._isSelected;
+    }
+
+    get likesCount(){
+        return this._likesCount;
+    }
+
+    get isSelected(){
+        return this._isSelected;
+ 
+ 
+
+import { Component } from "@angular/core";
+import { CoursesService } from "./courses.service";
+
+@Component({
+    selector: 'courses',
+    template: `
+        <h2>{{title}}</h2>
+        <ul>
+            <li *ngFor="let course of courses">
+                {{course}}
+            </li>
+        </ul>
+        <img [src]="image"/>
+        <table>
+            <tr>
+                <td [attr.colspan]="colSpan"></td>
+            </tr>
+        </table>
+    `
+})
+export class CoursesComponent{
+    title = "List of Courses";
+    courses;
+    image = ""
+    colSpan = 2;
+    constructor(service: CoursesService){
+        this.courses = service.getCourses();
+    }
+}
+
+asdga#$%$^%gd
+
+-------------------------------
+
+import { Component } from "@angular/core";
+import { CoursesService } from "./courses.service";
+
+@Component({
+    selector: 'courses',
+    template: `
+        <input [(ngModel)]="email" (keyup.enter)="onKeyPress()"/>
+    `
+})
+export class CoursesComponent{
+    email= "me@example.com";
+    onKeyPress(){
+        console.log("Enter clicked ",this.email)
+    }
+}
+
+---------
+
+import { Component } from "@angular/core";
+import { CoursesService } from "./courses.service";
+
+@Component({
+    selector: 'courses',
+    template: `
+        {{course.title | uppercase}}<br/>
+        {{course.students | number}}<br/>
+        {{course.rating | number: '1.2-2'}}<br/>
+        {{course.price | currency: 'INR': true: '.2-2'}}<br/>
+        {{course.releaseDate | date: 'shortDate'}}<br/>
+    `
+})
+export class CoursesComponent{
+    course = {
+        title : "The Complete Angular Course",
+        rating : 4.9745,
+        students : 30123,
+        price : 190.95,
+        releaseDate : new Date(2016, 3, 1)
+    };
+    
+}
+----------------
+
+
+@Component({
+    selector: 'courses',
+    template: `
+        {{text | summary: 10}}
+    `
+})
+export class CoursesComponent{
+    text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+}
+
+
+
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoritetChanged($event)"></favorite>

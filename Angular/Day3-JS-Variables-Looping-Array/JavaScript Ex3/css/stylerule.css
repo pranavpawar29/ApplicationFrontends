@@ -1,0 +1,61 @@
+.page-header{
+    padding:10px;
+    margin:0px;
+    color:white;
+    background-color: brown;
+}
+
+.container{
+    margin:20px 100px 20px 100px;
+    padding:10px;
+    border:2px solid brown;
+}
+
+.form-input{
+    margin:5px;
+    text-align:center;
+}
+
+.btn{
+    font:bold 20px 'times new roman';
+    margin:10px;
+}
+
+.btn-w1{
+    width:100px;
+}
+
+.hr-red{
+    border:1px solid red;
+    background-color: red;
+}
+
+.ul-basic{
+    list-style: none;
+    padding:0px;
+}
+
+.list-item{
+    padding:10px;
+    text-align:center;
+    border:1px solid lightgrey;
+}
+
+.li-w1{
+    width:100px
+}
+
+.li-w2{
+    width:200px;
+}
+
+.list-item:hover{
+    box-shadow:5px 5px 8px lightgreen;
+}
+
+
+.answer{
+    font:normal 25px 'consolas';
+    margin:10px;
+    color:green;
+}

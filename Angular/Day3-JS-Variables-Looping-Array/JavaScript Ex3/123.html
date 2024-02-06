@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JavaScript Ex3</title>
+        <link rel="stylesheet" href="./css/stylerule.css">
+
+        <script>
+            function choiceMenu(target)
+            {
+                var selected_menus = [];
+
+                var allMenus = document.getElementsByClassName("menu");
+
+                for(var i=0;i<allMenus.length;i++)
+                {
+                    if(allMenus[i].checked==true)
+                        selected_menus.push(allMenus[i].value);
+                }
+
+                document.getElementById("label-menus").innerHTML = selected_menus;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 class="page-header">JavaScript to handle Checkbox Change Event</h1>
+        <hr>
+
+        <div class="container">
+            <input type="checkbox" class="menu" id="menu1" value="Sandwich" onchange="choiceMenu(this)">
+            <label for="menu1">Sandwich</label>
+
+            <br><br>
+            <input type="checkbox" class="menu" id="menu2" value="Pizza" onchange="choiceMenu(this)">
+            <label for="menu2">Pizza</label>
+
+            <br><br>
+            <input type="checkbox" class="menu" id="menu3" value="Burger" onchange="choiceMenu(this)">
+            <label for="menu3">Burger</label>
+
+            <br><br>
+            <input type="checkbox" class="menu" id="menu4" value="Cold Drinks" onchange="choiceMenu(this)">
+            <label for="menu4">Cold Drinks</labels>
+
+            <br><br>
+            <label class="answer" id="label-menus">null</label>
+
+        </div>
+    </body>
+</html>

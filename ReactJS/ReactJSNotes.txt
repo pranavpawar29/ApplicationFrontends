@@ -1,0 +1,187 @@
+ReactJS - is javascript library to create user interface
+
+Build demo React aplication - have static and dynamic interactive content
+
+Components, JSX, Props, Using Data, Handling Events, State
+
+Dynamic data - with {}
+
+react hooks starts with use. will use only in component function top level
+
+rendering content conditionally
+
+mapping the array data to avoid retyping of code
+
+behind the scenes od jsx, Structuring Components and state, advanced state usage, Patterns and best practices 
+there is alternate way to create components without using jsx
+React.createElements()
+
+Forward Props,  Multiple component slots, Element Identifiers as Props, Default props values
+
+returning multiple jsx - add jsx as variable and pass it through props
+
+Setup the Component  types dynamically bu send sending string valus for default html and as variable {} for custom component
+
+
+Setting default props value
+
+
+if your state is an object or array, we have to update it in immutable manner
+
+And the reason for that recommendation is that if your state is an object or array you are dealing with a reference value in JavaScript. And therefore if you would be updating it like this you would be updating the old value in-memory immediately,even before this scheduled state update was executed by React.
+
+
+Lift up state
+
+deriving state
+
+Styling react Components - 
+	- with Vanilla CSS
+	- Scoping styles with CSS Modules
+	- CSS-in-JS Styling with "Styled Components"
+	- Styling with "Styled Components"
+
+Tailwind - CSS framework used on React or any other web development
+
+Debug react apps -
+Find and fix errors	
+	React Error messages
+	Lodical errors via browsers DevTools and degugger
+	React Strict mode
+	React DevTools against application and manipulation
+	
+
+Refs and Portals - Advanced DOM Access and value management
+	- Access dom elements with refs
+	- Managing values with refs
+	- Exposing API functions from Components
+	- Detaching DOM rendering from JSX Structure with protals
+	
+refs can be used where variable dont have direct connection with UI, and should be stored when we re-execute the components can be used again.
+
+forwardRefs 
+
+useImperativeHandle hooks
+
+Portals - teleprot the returned jsx somewhere else in the dom
+
+Advanced state lifting - 
+	- prop drilling problem
+	- Component composition
+	- Sharing state with context
+	- Managing complex state with reducers
+	
+Reducer - reduces one or more complext values to a simpler one
+
+Side Effects - that dont impact the current component render cycle 
+	UseEffects, Dependencies
+	
+navigator.geolocation
+
+useEffect();
+
+useCallBack hook - not to recreate the same function, but also use it in memory. use it when we use function as dependencies.
+
+memo() - component function render only if related value changes
+useMemo() - regular function
+state scheduling and batching
+
+
+milionJS
+
+
+
+Data Fetching and HTTP requests
+	-connect to database, send and collect data
+	
+Representational State transfer - 
+
+
+
+building custom hooks - 
+	hooks important rules
+		only call hooks inside of Component functions or other hooks functions
+		only call hooks on top level 
+
+functions with use begining are treated as hooks
+
+Working with forms and input
+
+
+Redux - react third party library
+	Redux toolkit
+	-State management system for cross-component or app-wide state
+	
+	local state, cross-component state, app-wide state
+	
+	to avoid multiple context, improve performance, high frequency state avoid context 
+	redux is flux like state management library
+	
+	
+	npm init 
+	npm install redux
+	npm install @reduxjs/toolkit
+	npm install react-router-dom 
+	
+	
+	
+	
+					 ------------Reducer Function
+		Forwarded to|				   |
+					|				   | Mutates/changes data in Store
+					|				   |
+				 Action		Central Data/ State store
+					|				   |
+					|				   |Subscription
+			Dispatch|				   |
+					 --------------Component
+							
+							
+							
+	Redux can be with different java script projects
+	useSelector, useStore
+	connect for class based components
+	redux toolkit
+	
+Advanced Redux
+	Handling Async Tasks with redux
+	Where to Put your code
+	Redux devTools
+	
+	
+	action creators
+	
+	thunks - function that delays action until later.
+		Acion creators function does not return the action itself but instead another function witch eventually returns the action
+	
+
+
+Routing in React
+	Multi Pages in Single Page apps
+	
+	
+fetchData using loader();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

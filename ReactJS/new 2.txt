@@ -1,0 +1,53 @@
+class Solution
+{
+    
+    public int exactly3Divisors(int N)
+    {
+        //Your code here
+        int count = 0; // Numbers having 3 divisors
+        if(N<=3) return count;
+        
+        int tempCount = 1; //Number of divisors starts from 1 as it is div by itself
+        int num = 0;
+        for(int i = 5; i<N; i++){
+            num = i;
+            while(num%2 == 0){
+                tempCount += 1;
+                num =num / 2;
+            }
+            while(num%3 == 0){
+                tempCount += 1;
+                num =num / 3;
+            }
+            for(int j = 5; j*j< num; j = j+6){
+                while(num%j == 0){
+                    tempCount += 1;
+                    num =num / j;
+                }
+                while(num%(j+2) == 0){
+                    tempCount += 1;
+                    num =num / (j+2);
+                }
+            }
+            if(num>3) tempCount+=1;
+            
+            if(tempCount == 3) count += 1;
+            tempCount = 1;
+        }
+        
+        return count;
+    }
+}
+
+
+
+TECHNOLOGY STACK
+- Full Stack Web Development: Java Spring Boot, React, Angular, ASP.Net
+- Database: MySQL, PostgreSQL
+- Agile Tools: Jira
+- Version Control: GitHub, Git Extension
+- Monitoring: Splunk, AppDynamics
+- DevOps: Jenkins, Maven, Ansible, Docker, Kubernetes
+- Cloud Services: AWS (EC2 instances)
+- SDLC: Scrum, Git flow
+- Additional: Python
