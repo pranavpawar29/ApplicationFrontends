@@ -1,12 +1,14 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import EventsPage, { loader as eventsLoader } from './Pages/EventsPage';
-import EventDetailPage, { loader as eventDetailsLoader} from './Pages/EventDetailPage';
+import EventDetailPage, { loader as eventDetailsLoader , action as eventDetailsAction} from './Pages/EventDetailPage';
 import NewEventPage from './Pages/NewEventPage';
 import EditEventPage from './Pages/EditEventPage';
 import RootLayout from './Pages/Root';
 import EventsRootLayout from './Pages/EventsRoot';
 import ErrorPage from './Pages/Error';
+import { action as eventActionPostOrUpdate } from './components/EventForm';
+import NewsletterPage, {action as newsletterAction} from './Pages/Newsletter';
 
 
 const router = createBrowserRouter([
@@ -19,15 +21,21 @@ const router = createBrowserRouter([
         path: "events", element: <EventsRootLayout />, children: [
           { index: true, element: <EventsPage />, loader: eventsLoader },
           { path: ":eventId",
+            id: "event-detail",
             loader: eventDetailsLoader,
             children: [
-              { index: true, element: <EventDetailPage /> },
-              { path: "edit", element: <EditEventPage /> }
+              { index: true, element: <EventDetailPage />, action: eventDetailsAction},
+              { path: "edit", element: <EditEventPage />, action: eventActionPostOrUpdate }
             ]
           },
-          { path: "new", element: <NewEventPage /> },
+          { path: "new", element: <NewEventPage />, action: eventActionPostOrUpdate }
         ]
       },
+      {
+        path: 'newsletter',
+        element: <NewsletterPage />,
+        action: newsletterAction,
+      }
     ]
   }
 ]);

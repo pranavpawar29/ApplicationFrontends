@@ -1,0 +1,9 @@
+<div>
+    <button (click)="onSelectUser()">
+        <!-- property binding one way-->
+         <!-- Signals to rea current values using parenthiss -->
+        <img [src]="imagePath()" [alt]="selectedUser().name">
+        <!-- String Interpolation -->
+        <span>{{selectedUser().name}}</span>
+    </button>
+</div>

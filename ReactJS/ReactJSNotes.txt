@@ -162,6 +162,21 @@ Routing in React
 	
 fetchData using loader();
 
+useRouteLoaderData();
+
+action()
+
+useFetcher trigger action or loader without transitioning
+
+defer - when data is loaded. means load UI even if the data is not collected
+
+
+
+
+Authentication in React
+
+
+
 
 
 

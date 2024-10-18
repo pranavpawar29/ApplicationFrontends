@@ -1,0 +1,51 @@
+Angular its Frontend framework. and collections of tools which brings features together.
+
+Why would you use Angular - Simplifies building complex, interactive User interfaces. write declarative code. Separations of concerns with components Some Object oriented programming concepts and principles. Uses Typescript.
+
+creating angular project - 
+	angular cli- command line interface
+		install Node
+		npm install -g @angular/cli
+		ng new first-angular-app 
+		
+		in vscode go to extensions Angular language Services,  Angular Essentials
+		
+		npm start
+		
+	Standalone project
+	
+root level files are configuration files
+	how the typescript code will be compiled, 
+	package files contains dependencies of application
+	angular.json. extra angular cli configuration.
+	.editorconfig how the code should be formatted
+	
+	src is for main Angular code
+	style for global style
+	index.html - main ui/ html
+	main.ts - first code file executed in application
+	
+	Decorators - add extra metadata
+	@Component converts class into a components - selector, templateUrl, styles, standalone, 
+	
+	
+	ng g c componentname --skip-tests
+	
+	
+	
+	standalone components
+	
+	ng generate component user
+	
+	string interpolation
+	
+	property binding
+	
+	getter to get values
+	
+	Listen Events
+	
+	States, events
+	
+	Signals-special instruction tell values are chenaged - container that constains value initia summy if changed then Angular will be notified. and aply all over places where it is used in ui.
+	
